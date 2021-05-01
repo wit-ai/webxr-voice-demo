@@ -1,0 +1,27 @@
+<!-- Copyright (c) Facebook, Inc. and its affiliates. -->
+
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="voice.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-entity
+        id="text-object" 
+        text="value: Try saying: 'Hey Gizmo, I add a box'; color: #FAFAFA; width: 5; anchor: align"
+        position="-2.5 0.2 -3" 
+        scale="1.5 1.5 1.5"
+        error-message
+        voice-command
+      >
+      </a-entity>
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+      <a-entity environment="preset: forest; dressingAmount: 500"></a-entity>
+    </a-scene>
+  </body>
+  
+</html>
