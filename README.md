@@ -21,8 +21,8 @@ This demo will show you how to integrate [Wit.ai](https://wit.ai) (NLU service) 
 
 
 *   Create a new Wit.ai app
-*   Unzip and import [`src/wit_ontology.zip`](src/wit_ontology.zip) to your Wit.ai app
-*   Update `TOKEN` in  [`src/voice.js`](src/voice.js) to the token obtained from your app’s **Settings** page 
+*   Unzip and import [`src/wit_example.zip`](src/wit_example.zip) to your Wit.ai app
+*   Update `CLIENT_TOKEN` in  [`src/voice.js`](src/voice.js) to the client token obtained from your app’s **Settings** page 
 *   Open the [`src/index.html`](src/index.html) file in your browser
 *   Allow microphone access
 

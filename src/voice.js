@@ -9,17 +9,17 @@ recognition.interimResults = true;
 recognition.maxAlternatives = 1;
 
 // Obtain it from your Wit.ai app's Settings page
-const TOKEN = "<REPLACE WITH YOUR TOKEN>";
+const CLIENT_TOKEN = "<REPLACE WITH YOUR CLIENT TOKEN>";
 
 // Set your wake word
 const WAKE_WORD = "gizmo";
 
-// Component to set error message when the Wit.ai token has not been updated
+// Component to set error message when the Wit.ai client token has not been updated
 AFRAME.registerComponent('error-message', {
   init: () => {
-    if(TOKEN === "<REPLACE WITH YOUR TOKEN>") {
+    if(CLIENT_TOKEN === "<REPLACE WITH YOUR CLIENT TOKEN>") {
       let textEl = document.querySelector('#text-object');
-      textEl.setAttribute("text", `value: UPDATE CODE WITH YOUR WIT.AI TOKEN`);
+      textEl.setAttribute("text", `value: UPDATE CODE WITH YOUR WIT.AI CLIENT TOKEN`);
     }
   }
 });
@@ -52,7 +52,7 @@ AFRAME.registerComponent('voice-command', {
 
         // Send the user's utterance to Wit.ai API for NLU inferencing
         fetch(`https://api.wit.ai/message?v=20210414&q=${utterance}`, {
-          headers: {Authorization: `Bearer ${TOKEN}`}
+          headers: {Authorization: `Bearer ${CLIENT_TOKEN}`}
         })
         .then(response => response.json())
         .then(json => {
